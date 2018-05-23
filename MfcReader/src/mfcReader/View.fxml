@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="475.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mfcReader.MfcReader">
+   <children>
+      <MenuBar layoutX="7.0" layoutY="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#onOpen" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Open" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clear" text="Clear" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" onAction="#help"/>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="tArea" layoutX="7.0" layoutY="25.0" prefHeight="403.0" prefWidth="489.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+      <HBox layoutX="466.0" layoutY="443.0" prefHeight="25.0" prefWidth="296.0" spacing="5.0" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="25.0">
+         <children>
+            <Label layoutX="466.0" layoutY="447.0" prefHeight="17.0" prefWidth="85.0" text="Feature length">
+               <padding>
+                  <Insets top="5.0" />
+               </padding></Label>
+            <TextField fx:id="len" layoutX="568.0" layoutY="443.0" prefHeight="25.0" prefWidth="69.0" />
+            <Button fx:id="btn" layoutX="714.0" layoutY="443.0" mnemonicParsing="false" onAction="#onOpen" text="Open . . ." />
+            <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="63.0" text="Clear" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
